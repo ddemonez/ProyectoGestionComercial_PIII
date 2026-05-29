@@ -1,0 +1,3 @@
+===== REPORTE HASH =====
+
+Colisiones: 0
