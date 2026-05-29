@@ -10,9 +10,9 @@ public class Conexion {
         try {
 
             Connection con = DriverManager.getConnection(
-                "jdbc:oracle:thin:@localhost:1521:orcl",
-                "ESTUDIANTE",
-                "DKK1989"
+                "jdbc:oracle:thin:@localhost:1521:orcl", // sid
+                "ESTUDIANTE", ///usuario
+                "DKK1989"     /// contraseña
             );
 
             System.out.println("Conexion exitosa");

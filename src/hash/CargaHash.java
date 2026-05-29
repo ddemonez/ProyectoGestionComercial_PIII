@@ -9,6 +9,7 @@ import java.sql.Statement;
 
 public class CargaHash {
 
+    // cargar datos a las tablas hash
     public static TablaHash cargarProductos() {
 
         TablaHash tabla =

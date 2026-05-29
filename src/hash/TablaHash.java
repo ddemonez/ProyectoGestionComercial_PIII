@@ -15,7 +15,7 @@ public class TablaHash {
         colisiones = 0;
     }
 
-    // METODO DIVISION
+    // METODO DIVISION hash abierto
     public int funcionHash(int clave) {
 
         return clave % tabla.length;
@@ -106,5 +106,11 @@ public class TablaHash {
     public NodoHash[] getTabla() {
 
     return tabla;
+}
+    public int obtenerPosicion(
+        int idProducto
+) {
+
+    return funcionHash(idProducto);
 }
 }

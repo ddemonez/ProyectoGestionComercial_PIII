@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 public class CargaGrafo {
 
+    // CARGAR grafos
     public static Grafo cargarGrafo() {
 
         Grafo grafo = new Grafo();

@@ -12,7 +12,7 @@ public class ProductoDAO {
 
         try {
 
-            Connection con = Conexion.conectar();
+            Connection con = Conexion.conectar(); // conesion a la base de datos
 
             Statement st = con.createStatement();
 

@@ -9,11 +9,11 @@ import hash.TablaHash;
 import modelos.Producto;
 
 import java.util.Scanner;
-import reportes.ReporteGrafo;
-import reportes.ReporteHash;
-import reportes.ReporteProductos;
+import reportes.ReporteProductosDOCX;
+import reportes.ReporteGrafoDOCX;
+import reportes.ReporteProductoMarcaDOCX;
 
-public class Menu {
+public class Menu { /// creamos el menu con las opciones principales 
 
     public static void main(String[] args) {
 
@@ -41,11 +41,11 @@ public class Menu {
 
             System.out.println("6. Buscar clientes por producto");
 
-            System.out.println("7. Generar reporte productos");
+            System.out.println("7. Generar reporte productos DOCX");
 
-            System.out.println("8. Generar reporte hash");
+            System.out.println("8. Generar Reporte Producto Marca DOCX");
 
-            System.out.println("9. Generar reporte grafo");
+            System.out.println("9. Generar reporte grafo DOCX");
 
             System.out.println("10. Salir");
 
@@ -61,7 +61,7 @@ public class Menu {
                         CargaHash.cargarProductos();
 
                     System.out.println(
-                        "Productos cargados correctamente."
+                        "Productos cargados correctamente." // debemos cragar primero la tabla hash
                     );
 
                     break;
@@ -71,7 +71,7 @@ public class Menu {
                     if(tablaHash == null) {
 
                         System.out.println(
-                            "Primero debe cargar el hash."
+                            "Primero debe cargar el hash." // las opciones del menu, necesitan iniciarse primero
                         );
 
                     } else {
@@ -95,7 +95,7 @@ public class Menu {
                         if(p != null) {
 
                             System.out.println(
-                                "Producto encontrado:"
+                                "Producto encontrado:" // en caso de no encontrar los elementos
                             );
 
                             System.out.println(p);
@@ -103,12 +103,12 @@ public class Menu {
                         } else {
 
                             System.out.println(
-                                "Producto no encontrado."
+                                "Producto no encontrado." // en caso de no encontrar los elementos
                             );
                         }
 
                         System.out.println(
-                            "Tiempo busqueda: "
+                            "Tiempo busqueda: " // tiempo de busqueda
                             + (fin - inicio)
                             + " ns"
                         );
@@ -121,7 +121,7 @@ public class Menu {
                     if(tablaHash == null) {
 
                         System.out.println(
-                            "Primero cargue el hash."
+                            "Primero cargue el hash." 
                         );
 
                     } else {
@@ -153,7 +153,7 @@ public class Menu {
                         sc.nextLine();
 
                         System.out.print(
-                            "Ingrese nodo: "
+                            "Ingrese nodo: " /// deben ser los nombres
                         );
 
                         String nodo =
@@ -198,7 +198,7 @@ public class Menu {
 
                     } else {
 
-                         ReporteProductos.generar(tablaHash);
+                         ReporteProductosDOCX.generar(tablaHash);
                         }
                     break;
                     
@@ -210,7 +210,7 @@ public class Menu {
 
                     } else {
 
-                        ReporteHash.generar(tablaHash);
+                        ReporteProductoMarcaDOCX.generar();
                     }
 
                     break;
@@ -219,11 +219,11 @@ public class Menu {
 
                     if(grafo == null) {
 
-                        System.out.println("Primero cargue el grafo.");
+                        System.out.println("Primero cargue el grafo."); // necesitamos el grafo antes, opcion no.4
 
                     } else {
 
-                        ReporteGrafo.generar(grafo);
+                        ReporteGrafoDOCX.generar(       );
                     }
 
                     break;

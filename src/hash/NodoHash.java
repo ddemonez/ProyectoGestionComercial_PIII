@@ -4,7 +4,7 @@ import modelos.Producto;
 
 public class NodoHash {
 
-    public Producto producto;
+    public Producto producto; // hashing
     public NodoHash siguiente;
     public NodoHash(Producto producto) {
 
